@@ -4,7 +4,7 @@ import { Button } from '@mui/material'
 export default function DeleteButton(props)
 {
     const DestroyStudent = () =>{
-        
+        alert(props.serial_number)
     }  
 
     return (

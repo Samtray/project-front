@@ -30,7 +30,7 @@ export default function StudentCRUD(props) {
               <TableCell align="left">{row.general_data.surname}</TableCell>
               <TableCell align="left">
                 <UpdateButton></UpdateButton>
-                <DeleteButton></DeleteButton>
+                <DeleteButton serial_number={row.serial_number}></DeleteButton>
               </TableCell>
             </TableRow>
           ))}
