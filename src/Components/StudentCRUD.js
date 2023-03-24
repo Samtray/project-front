@@ -6,6 +6,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import UpdateButton from './UpdateButton';
+import DeleteButton from './DestroyButton';
 
 export default function StudentCRUD(props) {
   return (
@@ -13,18 +15,23 @@ export default function StudentCRUD(props) {
       <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell align="right">serial number</TableCell>
-            <TableCell align="right">name</TableCell>
-            <TableCell align="right">surname</TableCell>
+            <TableCell align="left">serial number</TableCell>
+            <TableCell align="left">name</TableCell>
+            <TableCell align="left">surname</TableCell>
+            <TableCell align="left">Actions</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {props.students.map((row) => (
             <TableRow
               >
-              <TableCell align="right">{row.serial_number}</TableCell>
-              <TableCell align="right">{row.general_data.name}</TableCell>
-              <TableCell align="right">{row.general_data.surname}</TableCell>
+              <TableCell align="left">{row.serial_number}</TableCell>
+              <TableCell align="left">{row.general_data.name}</TableCell>
+              <TableCell align="left">{row.general_data.surname}</TableCell>
+              <TableCell align="left">
+                <UpdateButton></UpdateButton>
+                <DeleteButton></DeleteButton>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
