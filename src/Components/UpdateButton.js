@@ -9,7 +9,7 @@ export default function UpdateButton(props)
 
     return (
        <div>
-        <Button variant="outlined" onClick={UpdateStudent} color='success'>Update</Button>
+        <Button variant="outlined" onClick={props.handleClickOpen} color='success'>Update</Button>
        </div> 
     )
 
