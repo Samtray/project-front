@@ -17,7 +17,7 @@ export default function Index(){
       <Grid item xs={2}>
       </Grid>
       <Grid item xs={8}>
-        <StudentCRUD students={students}></StudentCRUD>
+        <StudentCRUD setStudents={setStudents} students={students}></StudentCRUD>
       </Grid>
       <Grid item xs={2}>
         <StoreButton></StoreButton>

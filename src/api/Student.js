@@ -30,4 +30,15 @@ function store() {}
 
 function update() {}
 
-function destroy() {}
+function destroy(serial_number, setStudents) {
+   
+    let url  = apiconstants.api_path + 'deleteStudent/' + serial_number;
+    const params = new URLSearchParams();
+    //params.append('serial_number', serial_number)
+    axios.post(url, params)
+    .then(res => {
+        index(setStudents);
+    })
+    .catch(err => {
+    })
+}
